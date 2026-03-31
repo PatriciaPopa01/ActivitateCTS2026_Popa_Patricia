@@ -15,23 +15,36 @@ public class Main {
 
         Internare internare2 = new Internare();
         internare2.setNumePacient("Gigel");
-        internare1.setArePatRabatabil(true);
+
+        System.out.println("INTERNARE 1 "  + internare1.toString());
+        System.out.println("INTERNARE 2 "  + internare2.toString());
+
+
+        System.out.println("============================\n");
 
         AbstractBuilder buidler = new InternareBuilder("Gigi");
 
         Internare internare3 = buidler.setArePatRabatabil(true).build();
-        Internare internare4 = buidler.setArePapuci(true).setNume("Ion").build();
+        System.out.println("INTERNARE 3 "  + internare3.toString());
 
-        System.out.println(internare3.toString());
-        System.out.println(internare4.toString());
+
+        Internare internare4 = buidler.setArePapuci(true).setNume("Ion").build();
+        System.out.println("INTERNARE 4 "  + internare4.toString());
+
+        System.out.println("============================\n");
+
+//        System.out.println(internare3.toString());
+//        System.out.println(internare4.toString());
 
 
         AbstractBuilder02 builder02 = new InternareBuilder02();
         builder02.setAreMicDejun(true);
         Internare02 internare5 = builder02.build("georgica");
+        internare5.setAreHalat(true);
+
         Internare02 internare6 = builder02.build("bibi");
 
-        internare5.setAreHalat(true);
         System.out.println(internare5.toString());
+        System.out.println(internare6);
     }
 }
