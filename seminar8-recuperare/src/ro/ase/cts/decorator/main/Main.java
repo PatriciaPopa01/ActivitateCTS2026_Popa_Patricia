@@ -30,6 +30,7 @@ public class Main {
         decoratorTest.printeazaFelicitare();
 
         NotaPlataDecorator decorator = new NotaPlataPrintatNoulAn(notaPlata2);
+        System.out.println("+++++++++++++++++++++++++++++++++++++");
         decorator.printeaza();
         decorator.printeazaFelicitare();
 
